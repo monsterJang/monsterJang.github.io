@@ -6,9 +6,10 @@
     <content><![CDATA[<p>使用Hexo + Github Pages搭建个人博客已经越来越简单，网上的教程也有很多，这里贴一个我搭建时主要参考的链接：<a href="https://segmentfault.com/a/1190000017986794" target="_blank" rel="noopener">超详细Hexo+Github Page搭建技术博客教程【持续更新】</a>，以及主要记录一下自己的NexT主题的相关配置。</p>
 <a id="more"></a>
 <p>有疑惑的部分可以直接参考官方文档：</p>
-<pre><code>- [Hexo Documentation](https://hexo.io/docs/)
-- [NexT Documentation](https://theme-next.org/docs/)
-</code></pre>
+<ul>
+<li><a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo Documentation</a></li>
+<li><a href="https://theme-next.org/docs/" target="_blank" rel="noopener">NexT Documentation</a></li>
+</ul>
 <p><strong>站点配置文件</strong>：<code>/_config.yml</code>。 位于站点根目录下，主要包含 Hexo 本身的配置</p>
 <p><strong>主题配置文件</strong>：<code>/themes/next/_config.yml</code>。位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项</p>
 <h2 id="安装next"><a class="markdownIt-Anchor" href="#安装next"></a> 安装NexT</h2>

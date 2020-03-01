@@ -1,26 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo + Github Pages搭建个人博客 &amp;&amp; NexT主题个性化配置</title>
+    <url>/2020/03/01/Hexo-Github-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-NexT%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>使用Hexo + Github Pages搭建个人博客已经越来越简单，网上的教程也有很多，这里贴一个我搭建时主要参考的链接：<a href="https://segmentfault.com/a/1190000017986794" target="_blank" rel="noopener">超详细Hexo+Github Page搭建技术博客教程【持续更新】</a>，以及主要记录一下自己的NexT主题的相关配置。</p>
+<a id="more"></a>
+<p>有疑惑的部分可以直接参考官方文档：</p>
+<pre><code>- [Hexo Documentation](https://hexo.io/docs/)
+- [NexT Documentation](https://theme-next.org/docs/)
+</code></pre>
+<p><strong>站点配置文件</strong>：<code>/_config.yml</code>。 位于站点根目录下，主要包含 Hexo 本身的配置</p>
+<p><strong>主题配置文件</strong>：<code>/themes/next/_config.yml</code>。位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项</p>
+<h2 id="安装next"><a class="markdownIt-Anchor" href="#安装next"></a> 安装NexT</h2>
+<h3 id="下载主题"><a class="markdownIt-Anchor" href="#下载主题"></a> 下载主题</h3>
+<p>在终端窗口下，定位到 Hexo 站点目录下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd hexo</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+<h3 id="启用主题"><a class="markdownIt-Anchor" href="#启用主题"></a> 启用主题</h3>
+<p>打开站点配置文件，找到 <code>theme</code> 字段，并将其值更改为 <code>next</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+<h2 id="选择scheme"><a class="markdownIt-Anchor" href="#选择scheme"></a> 选择Scheme</h2>
+<p>Scheme 是 NexT 提供的一种特性，借助于 Scheme，NexT 为你提供多种不同的外观。同时，几乎所有的配置都可以 在 Scheme 之间共用。目前 NexT 支持的Scheme有： <a href="https://muse.theme-next.org/" target="_blank" rel="noopener">Muse</a> |  <a href="https://mist.theme-next.org/" target="_blank" rel="noopener">Mist</a> |  <a href="https://pisces.theme-next.org/" target="_blank" rel="noopener">Pisces</a> |  <a href="https://theme-next.org/" target="_blank" rel="noopener">Gemini</a></p>
+<p>打开主题配置文件，找到<code>scheme</code>字段，更改为想要的值，这里选择了Pisces</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+<h2 id="设置头像"><a class="markdownIt-Anchor" href="#设置头像"></a> 设置头像</h2>
+<p>编辑主题配置文件，找到 <code>avatar</code> 字段，修改头像</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line">avatar:</span><br><span class="line">  url: &#x2F;images&#x2F;avatar_1.jpg #&#x2F;images&#x2F;avatar.gif</span><br><span class="line">  rounded: false</span><br><span class="line">  rotated: false</span><br></pre></td></tr></table></figure>
+<h2 id="设置站点标题-昵称-描述"><a class="markdownIt-Anchor" href="#设置站点标题-昵称-描述"></a> 设置站点标题、昵称、描述</h2>
+<p>编辑站点配置文件，找到 <code>title</code> 字段，修改标题；找到 <code>author</code> 字段，修改昵称；找到 <code>description</code> 字段，修改描述</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: M1saki</span><br><span class="line">description: &#39;不要低估你的能力&lt;br&gt;不要高估你的毅力&#39;</span><br><span class="line">author: M1saki</span><br></pre></td></tr></table></figure>
+<h2 id="设置语言"><a class="markdownIt-Anchor" href="#设置语言"></a> 设置语言</h2>
+<p>打开站点配置文件，找到<code>language</code>字段，更改为想要的值，这里选择了zh-CN</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">language: zh-CN</span><br></pre></td></tr></table></figure>
+<h2 id="设置菜单"><a class="markdownIt-Anchor" href="#设置菜单"></a> 设置菜单</h2>
+<p>菜单配置包括两个部分，第一是菜单项（名称、链接和对应的图标），第二是菜单项的显示文本。 NexT 使用的是 <a href="http://fontawesome.io/" target="_blank" rel="noopener">Font Awesome</a> 提供的图标。</p>
+<h3 id="设置菜单项和菜单项对应的链接和图标"><a class="markdownIt-Anchor" href="#设置菜单项和菜单项对应的链接和图标"></a> 设置菜单项和菜单项对应的链接和图标</h3>
+<p>编辑主题配置文件，找到<code>menu</code>字段，格式为：<code>key: /link/ || icon</code></p>
+<p>在创建完菜单项之后，对应于每个菜单项的链接需要生成对应页面。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || home</span><br><span class="line">  about: &#x2F;about&#x2F; || user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br><span class="line">  #schedule: &#x2F;schedule&#x2F; || calendar</span><br><span class="line">  #sitemap: &#x2F;sitemap.xml || sitemap</span><br><span class="line">  commonweal: &#x2F;404.html || heartbeat</span><br></pre></td></tr></table></figure>
+<h3 id="设置菜单项的显示文本"><a class="markdownIt-Anchor" href="#设置菜单项的显示文本"></a> 设置菜单项的显示文本</h3>
+<p>找到 NexT 主题目录下的 <code>languages/{language}.yml</code> （<code>{language}</code> 为你所使用的语言）。</p>
+<p><code>/themes/next/languages/zh-CN.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: 首页</span><br><span class="line">  archives: 归档</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  about: 关于</span><br><span class="line">  search: 搜索</span><br><span class="line">  schedule: 日程表</span><br><span class="line">  sitemap: 站点地图</span><br><span class="line">  commonweal: 公益 404</span><br></pre></td></tr></table></figure>
+<h2 id="配置标签页"><a class="markdownIt-Anchor" href="#配置标签页"></a> 配置标签页</h2>
+<p>定位到 Hexo 站点目录下，执行命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>成功后会提示创建了一个<code>index.md</code> 文件。根据提示的路径，找到 <code>index.md</code> 文件，添加 <code>type: &quot;tags&quot;</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2020-03-01 11:29:13</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>这样，在需要添加分类的文章，只需添加tags属性即可。</p>
+<h2 id="配置分类页"><a class="markdownIt-Anchor" href="#配置分类页"></a> 配置分类页</h2>
+<p>定位到 Hexo 站点目录下，执行命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+<p>成功后会提示创建了一个<code>index.md</code> 文件。根据提示的路径，找到 <code>index.md</code> 文件，添加 <code>type: &quot;categories&quot;</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 分类</span><br><span class="line">date: 2020-03-01 11:35:32</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>这样，在需要添加分类的文章，只需添加categories属性即可。</p>
+<h2 id="配置关于页"><a class="markdownIt-Anchor" href="#配置关于页"></a> 配置关于页</h2>
+<p>定位到 Hexo 站点目录下，执行命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page about</span><br></pre></td></tr></table></figure>
+<p>成功后会提示创建了一个<code>index.md</code> 文件。根据提示的路径，找到 <code>index.md</code> 文件，修改：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 关于</span><br><span class="line">date: 2020-03-01 11:36:57</span><br><span class="line">type: &quot;about&quot;</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">快乐咸鱼每一天</span><br></pre></td></tr></table></figure>
+<h2 id="配置腾讯公益404页面"><a class="markdownIt-Anchor" href="#配置腾讯公益404页面"></a> 配置腾讯公益404页面</h2>
+<p>在 Hexo 站点目录 /source 文件夹下创建 <code>404.html</code> ，修改内容为</p>
+<p><code>/source/404.html</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">layout: false</span><br><span class="line">title: &quot;404 Not Found: 该页无法显示&quot;</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta http-equiv&#x3D;&quot;content-type&quot; content&#x3D;&quot;text&#x2F;html;charset&#x3D;utf-8;&quot;&#x2F;&gt;</span><br><span class="line">  &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;IE&#x3D;edge,chrome&#x3D;1&quot; &#x2F;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;robots&quot; content&#x3D;&quot;all&quot; &#x2F;&gt;</span><br><span class="line">  &lt;meta name&#x3D;&quot;robots&quot; content&#x3D;&quot;index,follow&quot;&#x2F;&gt;</span><br><span class="line">  &lt;link rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css&quot; href&#x3D;&quot;https:&#x2F;&#x2F;qzone.qq.com&#x2F;gy&#x2F;404&#x2F;style&#x2F;404style.css&quot;&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;script type&#x3D;&quot;text&#x2F;plain&quot; src&#x3D;&quot;http:&#x2F;&#x2F;www.qq.com&#x2F;404&#x2F;search_children.js&quot;</span><br><span class="line">          charset&#x3D;&quot;utf-8&quot; homePageUrl&#x3D;&quot;&#x2F;&quot;</span><br><span class="line">          homePageName&#x3D;&quot;回到我的主页&quot;&gt;</span><br><span class="line">  &lt;&#x2F;script&gt;</span><br><span class="line">  &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;qzone.qq.com&#x2F;gy&#x2F;404&#x2F;data.js&quot; charset&#x3D;&quot;utf-8&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;qzone.qq.com&#x2F;gy&#x2F;404&#x2F;page.js&quot; charset&#x3D;&quot;utf-8&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="添加字数统计和阅读时长"><a class="markdownIt-Anchor" href="#添加字数统计和阅读时长"></a> 添加字数统计和阅读时长</h2>
+<p>定位到 Hexo 站点目录下，安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save&#96;</span><br></pre></td></tr></table></figure>
+<p>编辑站点配置文件，添加以下配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 文章字数统计</span><br><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true</span><br><span class="line">  time: true</span><br><span class="line">  total_symbols: true</span><br><span class="line">  total_time: true</span><br></pre></td></tr></table></figure>
+<p>编辑主题配置文件，找到 <code>symbols_count_time</code> 字段：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-symbols-count-time</span><br><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true</span><br><span class="line">  item_text_post: true</span><br><span class="line">  item_text_total: true</span><br><span class="line">  awl: 4</span><br><span class="line">  wpm: 275</span><br></pre></td></tr></table></figure>
+<h2 id="开启fancybox图片弹出效果"><a class="markdownIt-Anchor" href="#开启fancybox图片弹出效果"></a> 开启fancybox图片弹出效果</h2>
+<p>编辑主题配置文件，找到 <code>fancybox</code> 字段，设置为true，另外，<code>vendors</code> 填上对应CDN地址即可开启：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">fancybox: true</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vendors:</span><br><span class="line">  ...</span><br><span class="line">  ...</span><br><span class="line">  fancybox: &#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;fancyapps&#x2F;fancybox@3&#x2F;dist&#x2F;jquery.fancybox.min.js</span><br><span class="line">  fancybox_css: &#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;fancyapps&#x2F;fancybox@3&#x2F;dist&#x2F;jquery.fancybox.min.css</span><br></pre></td></tr></table></figure>
+<h2 id="首页显示阅读全文"><a class="markdownIt-Anchor" href="#首页显示阅读全文"></a> 首页显示阅读全文</h2>
+<p>使用的 Next 版本是 <code>NexT 7.7.2</code>，官方文档 <a href="https://theme-next.org/docs/theme-settings/posts#Preamble-Text" target="_blank" rel="noopener">NexT - Preamble Text</a> 提供了以下方法：</p>
+<h3 id="excerpt_description"><a class="markdownIt-Anchor" href="#excerpt_description"></a> excerpt_description</h3>
+<p>编辑主题配置文件，找到 <code>excerpt_description</code> 字段，设置为 true</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">excerpt_description: true</span><br></pre></td></tr></table></figure>
+<p>之后，可以通过在 <code>Front-matter</code> 中添加 <code>description</code> 来添加文章序言。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: test</span><br><span class="line">date: 2020-03-01 00:41:38</span><br><span class="line">description: welcome test</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h3 id="tag-more"><a class="markdownIt-Anchor" href="#tag-more"></a> Tag more</h3>
+<p>在文章中使用 <code>&lt;!-- more --&gt;</code> 手动中断文章，在此之前的内容会作为文章序言展示。</p>
+<p>推荐使用 Tag more 方法</p>
+<h2 id="搜索功能-local-search"><a class="markdownIt-Anchor" href="#搜索功能-local-search"></a> 搜索功能 - Local Search</h2>
+<p>参考官方文档 <a href="https://theme-next.org/docs/third-party-services/search-services#Local-Search" target="_blank" rel="noopener">NexT - Local Search</a> ，使用Local Search启用本地搜索功能</p>
+<p>定位到 Hexo 站点目录下，安装 <code>hexo-generator-searchdb</code> ：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<p>编辑站点配置文件，添加以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+<p>编辑主题配置文件，找到 <code>local_search</code> 字段，启用本地搜索功能：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Local Search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  trigger: auto</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  unescape: false</span><br><span class="line">  preload: false</span><br></pre></td></tr></table></figure>
+<h2 id="个人图床"><a class="markdownIt-Anchor" href="#个人图床"></a> 个人图床</h2>
+<p><a href="https://blog.csdn.net/yefcion/article/details/88412025" target="_blank" rel="noopener">PicGo + GitHub 搭建个人图床工具</a></p>
+<h2 id="不蒜子统计-busuanzi-counting"><a class="markdownIt-Anchor" href="#不蒜子统计-busuanzi-counting"></a> 不蒜子统计 - Busuanzi Counting</h2>
+<p>参考官方文档 <a href="https://theme-next.org/docs/third-party-services/statistics-and-analytics#Busuanzi-Counting-China" target="_blank" rel="noopener">NexT - Busuanzi Counting</a></p>
+<p>编辑主题配置文件，找到 <code>busuanzi_count</code> 字段：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  enable: true</span><br><span class="line">  total_visitors: true</span><br><span class="line">  total_visitors_icon: user</span><br><span class="line">  total_views: true</span><br><span class="line">  total_views_icon: eye</span><br><span class="line">  post_views: true</span><br><span class="line">  post_views_icon: eye</span><br></pre></td></tr></table></figure>
+<h2 id="数学公式渲染引擎-katex"><a class="markdownIt-Anchor" href="#数学公式渲染引擎-katex"></a> 数学公式渲染引擎 - Katex</h2>
+<p>参考官方文档 <a href="https://theme-next.org/docs/third-party-services/math-equations" target="_blank" rel="noopener">NexT - Math Equations</a></p>
+<p>定位到 Hexo 站点目录下，安装 <code>hexo-renderer-markdown-it-plus</code> ：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it-plus --save</span><br></pre></td></tr></table></figure>
+<p>编辑主题配置文件，找到 <code>math</code> 字段：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">math:</span><br><span class="line">  per_page: true</span><br><span class="line">  ...</span><br><span class="line">  ...</span><br><span class="line">  katex:</span><br><span class="line">    enable: true</span><br><span class="line">    copy_tex: false</span><br></pre></td></tr></table></figure>
+<p><code>per_page</code> 为 true，表示只渲染那些在 <code>Front-matter</code> 中具有<code>mathjax：true</code>的页面。如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: test</span><br><span class="line">date: 2020-03-01 00:41:38</span><br><span class="line">mathjax: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>此外，要注意的是，使用Katex引擎渲染，在输入公式时有一些限制。</p>
+<ul>
+<li>显示的数学公式（即 <code>$$ ... $$</code> ）在开始的 <code>$$</code> 前方和结束的 <code>$$</code> 后方（<a href="https://github.com/theme-next/hexo-theme-next/pull/32#issuecomment-357489509" target="_blank" rel="noopener">comment #32</a>），不得有任何字符（空格除外）。</li>
+<li>不支持 Unicode（<a href="https://github.com/theme-next/hexo-theme-next/pull/32#issuecomment-357489509" target="_blank" rel="noopener">comment #32</a>）。</li>
+<li>内联公式 <code>(..$..$)</code> 在开始的 <code>$</code> 之后和结尾的 <code>$</code> 之前必须没有空格</li>
+<li>如果在正文标题中使用数学公式（即 <code>## Heading</code> ），那么在相应的目录项中，它将显示3次相关的 <code>LaTex</code> 代码</li>
+<li>如果在文章标题中使用数学公式，则它将不会被呈现。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>hexo-next</tag>
+        <tag>github-pages</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>test</title>
     <url>/2020/03/01/test/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
+<h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2>
+<h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+<h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
+<h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
+<h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(<span class="string">"hello world!"</span>)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://github.com/monsterJang/BlogPic/blob/master/1.png" alt="fib"></p>
-<p><img src="/images/avatar_1.jpg" alt="avatar"></p>
+<p><mark>hexo next</mark></p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">1+1=2
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span></span></p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>+</mo><mn>2</mn><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">2+2=4
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span></span></p>
+<h3 id="calc-336"><a class="markdownIt-Anchor" href="#calc-336"></a> calc <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>+</mo><mn>3</mn><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">3+3=6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span></h3>
+<p><img src="https://github.com/monsterJang/BlogPic/blob/master/1.png" alt="fib" /></p>
+<p><img src="/images/avatar_1.jpg" alt="avatar" /></p>
 <p>帝高阳之苗裔兮，朕皇考曰伯庸。</p>
 <p>摄提贞于孟陬兮，惟庚寅吾以降。</p>
 <p>皇览揆余初度兮，肇锡余以嘉名。</p>
@@ -210,6 +339,9 @@
 <p>国无人莫我知兮，又何怀乎故都！</p>
 <p>既莫足与为美政兮，吾将从彭咸之所居！</p>
 ]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
       <tags>
         <tag>test</tag>
       </tags>
@@ -219,18 +351,18 @@
     <url>/2020/02/29/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <a id="more"></a>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
+<h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2>
+<h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+<h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
+<h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
+<h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
   </entry>

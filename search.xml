@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>weekly-report: 2020-03-23 to 2020-03-29</title>
+    <url>/2020/03/29/weekly-report-2020-03-23-to-2020-03-29/</url>
+    <content><![CDATA[<h3 id="本周工作"><a class="markdownIt-Anchor" href="#本周工作"></a> 本周工作</h3><ul><li>继续阅读论文《Belief Rule-Base Inference Methodology Using the Evidential Reasoning Approach—RIMER》，刚好大致上过了一遍，对于论文中的概念大概能理解，但是对于公式以及如何下手去复现之类的着实有点脑阔疼，处于一种看能大概看得懂，做又不太清楚如何做的状态。</li><li>周常工作<ul><li>课程相关： 机器学习和云计算视频学习，工程实践课程作业</li><li>助教相关工作： 周三/四作部分习题的题解，周末出题/验题工作</li></ul></li></ul><h3 id="下周计划"><a class="markdownIt-Anchor" href="#下周计划"></a> 下周计划</h3><ul><li>尽量以做成汇报的目的厘清一下《Belief Rule-Base Inference Methodology Using the Evidential Reasoning Approach—RIMER》这篇论文，之后再去考虑复现</li><li>课程学习/作业</li></ul>]]></content>
+      <categories>
+        <category>weekly-report</category>
+      </categories>
+      <tags>
+        <tag>weekly-report</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>weekly-report: 2020-03-16 to 2020-03-22</title>
     <url>/2020/03/23/weekly-report-2020-03-16-to-2020-03-22/</url>
-    <content><![CDATA[<h3 id="本周工作"><a class="markdownIt-Anchor" href="#本周工作"></a> 本周工作</h3><ul><li>阅读论文《Belief Rule-Base Inference Methodology Using the Evidential Reasoning Approach—RIMER》的部分内容，毕竟是篇要细读的论文，目前在艰难的边阅读边翻译阶段：<a href="https://github.com/Fuzhou-U-ACM-Research-Group/LongjiangChen/blob/master/paper-reading/" target="_blank" rel="noopener">【doing】译文</a></li><li>课程相关： 机器学习和云计算视频学习，工程实践课程作业<ul><li>每周日常，主要还是工程实践的作业比较花时间</li></ul></li><li>助教相关工作： 包括出数据、验题工作以及作部分习题的题解<ul><li>这一周比较爆炸，周一周二在做 C 语言题目的数据还有验题的工作，然后接到 gyy 学长的电话拿到了一口新锅，AI 班的数据结构而且周末要 finish 4道题，所以周五周六周天都有花时间在找题-出题-出数据-验题上。</li><li>周三日常在做一些题目的题解，结果作为不经常打题的老年选手，又被 <code>dp</code> 给小小制裁了一下</li></ul></li></ul><h3 id="下周计划"><a class="markdownIt-Anchor" href="#下周计划"></a> 下周计划</h3><ul><li>继续阅读论文《Belief Rule-Base Inference Methodology Using the Evidential Reasoning Approach—RIMER》</li><li>课程学习/作业</li></ul>]]></content>
+    <content><![CDATA[<h3 id="本周工作"><a class="markdownIt-Anchor" href="#本周工作"></a> 本周工作</h3><ul><li>阅读论文《Belief Rule-Base Inference Methodology Using the Evidential Reasoning Approach—RIMER》的部分内容，毕竟是篇要细读的论文，目前在艰难的边阅读边翻译阶段：<a href="https://github.com/Fuzhou-U-ACM-Research-Group/LongjiangChen/blob/master/paper-reading/2006-Belief%20Rule-Base%20Inference%20Methodology%20Using%20the%20Evidential%20Reasoning%20Approach%E2%80%94RIMER.md" target="_blank" rel="noopener">【doing】译文</a></li><li>课程相关： 机器学习和云计算视频学习，工程实践课程作业<ul><li>每周日常，主要还是工程实践的作业比较花时间</li></ul></li><li>助教相关工作： 包括出数据、验题工作以及作部分习题的题解<ul><li>这一周比较爆炸，周一周二在做 C 语言题目的数据还有验题的工作，然后接到 gyy 学长的电话拿到了一口新锅，AI 班的数据结构而且周末要 finish 4道题，所以周五周六周天都有花时间在找题-出题-出数据-验题上。</li><li>周三日常在做一些题目的题解，结果作为不经常打题的老年选手，又被 <code>dp</code> 给小小制裁了一下</li></ul></li></ul><h3 id="下周计划"><a class="markdownIt-Anchor" href="#下周计划"></a> 下周计划</h3><ul><li>继续阅读论文《Belief Rule-Base Inference Methodology Using the Evidential Reasoning Approach—RIMER》</li><li>课程学习/作业</li></ul>]]></content>
+      <categories>
+        <category>weekly-report</category>
+      </categories>
       <tags>
         <tag>weekly-report</tag>
       </tags>
   </entry>
   <entry>
     <title>Belief Rule-Base Inference Methodology Using the Evidential Reasoning Approach—RIMER</title>
-    <url>/2020/03/19/2006-belief-rule-base-inference-methodology-using-the-evidential-reasoning-approach-RIMER-JBYang-RIME-IEEESMC/</url>
-    <content><![CDATA[<blockquote><p>Yang J B , Liu J , Wang J , et al. Belief rule-base inference methodology using the evidential reasoning Approach-RIMER[J]. IEEE Transactions on Systems Man &amp; Cybernetics Part A Systems &amp; Humans, 2006, 36(2):266-285.</p></blockquote><a id="more"></a><p>【doing】译文：<a href="https://github.com/Fuzhou-U-ACM-Research-Group/LongjiangChen/blob/master/paper-reading/2006-Belief%20Rule-Base%20Inference%20Methodology%20Using%20the%20Evidential%20Reasoning%20Approach%E2%80%94RIMER.md" target="_blank" rel="noopener">2006-Belief Rule-Base Inference Methodology Using the Evidential Reasoning Approach—RIMER</a></p>]]></content>
+    <url>/2020/03/19/2006-belief-rule-base-inference-methodology-using-the-evidential-reasoning-approach-RIMER/</url>
+    <content><![CDATA[<blockquote><p>Yang J B , Liu J , Wang J , et al. Belief rule-base inference methodology using the evidential reasoning Approach-RIMER[J]. IEEE Transactions on Systems Man &amp; Cybernetics Part A Systems &amp; Humans, 2006, 36(2):266-285.</p></blockquote><a id="more"></a><p>译文：<a href="https://github.com/Fuzhou-U-ACM-Research-Group/LongjiangChen/blob/master/paper-reading/2006-Belief%20Rule-Base%20Inference%20Methodology%20Using%20the%20Evidential%20Reasoning%20Approach%E2%80%94RIMER.md" target="_blank" rel="noopener">2006-Belief Rule-Base Inference Methodology Using the Evidential Reasoning Approach—RIMER</a></p>]]></content>
       <categories>
         <category>papers</category>
       </categories>

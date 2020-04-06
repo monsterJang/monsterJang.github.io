@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>weekly-report: 2020-03-30 to 2020-04-05</title>
+    <url>/2020/04/06/weekly-report-2020-03-30-to-2020-04-05/</url>
+    <content><![CDATA[<h3 id="本周工作"><a class="markdownIt-Anchor" href="#本周工作"></a> 本周工作</h3><ul><li>继续阅读论文《Belief Rule-Base Inference Methodology Using the Evidential Reasoning Approach—RIMER》，整理<a href="https://monsterjang.github.io/2020/03/19/2006-belief-rule-base-inference-methodology-using-the-evidential-reasoning-approach-RIMER/#more">论文笔记</a>，对照着代码去理解</li><li>准备本周的汇报</li><li>周常工作<ul><li>课程相关： 机器学习和云计算视频学习，工程实践课程作业</li><li>助教相关工作：出题/验题工作，作部分习题的题解（这个锅终于背完了233</li></ul></li></ul><h3 id="下周计划"><a class="markdownIt-Anchor" href="#下周计划"></a> 下周计划</h3><ul><li>继续阅读BRB的相关论文和实验代码</li><li>课程学习/作业</li></ul>]]></content>
+      <categories>
+        <category>weekly-report</category>
+      </categories>
+      <tags>
+        <tag>weekly-report</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>weekly-report: 2020-03-23 to 2020-03-29</title>
-    <url>/2020/03/29/weekly-report-2020-03-23-to-2020-03-29/</url>
+    <url>/2020/03/29/weekly-report-2020-03-23-to-2020-03-29%20copy/</url>
     <content><![CDATA[<h3 id="本周工作"><a class="markdownIt-Anchor" href="#本周工作"></a> 本周工作</h3><ul><li>继续阅读论文《Belief Rule-Base Inference Methodology Using the Evidential Reasoning Approach—RIMER》，刚好大致上过了一遍，对于论文中的概念大概能理解，但是对于公式以及如何下手去复现之类的着实有点脑阔疼，处于一种看能大概看得懂，做又不太清楚如何做的状态。</li><li>周常工作<ul><li>课程相关： 机器学习和云计算视频学习，工程实践课程作业</li><li>助教相关工作： 周三/四作部分习题的题解，周末出题/验题工作</li></ul></li></ul><h3 id="下周计划"><a class="markdownIt-Anchor" href="#下周计划"></a> 下周计划</h3><ul><li>尽量以做成汇报的目的厘清一下《Belief Rule-Base Inference Methodology Using the Evidential Reasoning Approach—RIMER》这篇论文，之后再去考虑复现</li><li>课程学习/作业</li></ul>]]></content>
       <categories>
         <category>weekly-report</category>

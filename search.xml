@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>weekly-report: 2020-05-04 to 2020-05-10</title>
+    <url>/2020/05/11/weekly-report/weekly-report-2020-05-04-to-2020-05-10/</url>
+    <content><![CDATA[<h3 id="本周工作"><a class="markdownIt-Anchor" href="#本周工作"></a> 本周工作</h3><ul><li>上周看的 DBSCAN 那篇论文在案例研究的结果比较时候涉及了几个主要的不同EBRB模型：<ul><li>liu-EBRB: 《A novel belief rule base representation, generation and its inference methodology》</li><li>DRA-EBRB: 《A new dynamic rule activation method for extended belief rule-based systems》</li><li>VP-EBRB &amp; MVP-EBRB: 《A rule activation method for extended belief rule base with VP-tree and MVP-tree》</li><li>CARBA-EBRB: 《A consistency analysis-based rule activation method for extended belief-rule-based systems》</li><li>EBRB-C: 《Extended belief-rule-based system with new activation rule determination and weight calculation for classiﬁcation problems》</li></ul></li><li>这周看了 DRA-EBRB 的部分内容</li><li>课程相关： 机器学习和云计算视频学习，主要云计算的openstack实验花了很多时间</li></ul><h3 id="下周计划"><a class="markdownIt-Anchor" href="#下周计划"></a> 下周计划</h3><ul><li>继续阅读相关论文</li><li>课程学习/作业</li></ul>]]></content>
+      <categories>
+        <category>weekly-report</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>weekly-report: 2020-04-27 to 2020-05-03</title>
+    <url>/2020/05/04/weekly-report/weekly-report-2020-04-27-to-2020-05-03/</url>
+    <content><![CDATA[<h3 id="本周工作"><a class="markdownIt-Anchor" href="#本周工作"></a> 本周工作</h3><ul><li>阅读论文《A new rule reduction and training method for extended belief rule base based on DBSCAN algorithm》</li><li>准备汇报的内容</li><li>课程相关： 机器学习和云计算视频学习</li></ul><h3 id="下周计划"><a class="markdownIt-Anchor" href="#下周计划"></a> 下周计划</h3><ul><li>继续阅读相关论文</li><li>课程学习/作业</li></ul>]]></content>
+      <categories>
+        <category>weekly-report</category>
+      </categories>
+  </entry>
+  <entry>
     <title>weekly-report: 2020-04-20 to 2020-04-26</title>
     <url>/2020/04/27/weekly-report/weekly-report-2020-04-20-to-2020-04-26/</url>
     <content><![CDATA[<h3 id="本周工作"><a class="markdownIt-Anchor" href="#本周工作"></a> 本周工作</h3><ul><li>继续阅读论文《Multiple Attribute Decision Making Under Uncertainty》</li><li>阅读论文《A new rule reduction and training method for extended belief rule base based on DBSCAN algorithm》的前面一部分内容，整理部分笔记。</li><li>周常工作<ul><li>课程相关： 机器学习和云计算视频学习，工程实践课程作业</li></ul></li></ul><h3 id="下周计划"><a class="markdownIt-Anchor" href="#下周计划"></a> 下周计划</h3><ul><li>继续阅读论文《A new rule reduction and training method for extended belief rule base based on DBSCAN algorithm》</li><li>课程学习/作业</li></ul>]]></content>
